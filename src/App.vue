@@ -46,7 +46,7 @@
                 >Sản Phẩm</a
               >
               <a
-                href="https://readdy.link/preview/d5f152a5-3cf8-4d95-b4a1-4ba54051f845/1136950"
+                href="https://vuagaominhhong-app.vercel.app/"
                 data-readdy="true"
                 target="_blank"
                 :class="{
