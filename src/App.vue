@@ -55,7 +55,7 @@
                     currentPage !== 'rice-log',
                 }"
                 class="px-3 py-2 text-lg font-bold transition-colors cursor-pointer"
-                >Nhật Ký Gạo</a
+                >Số Gạo</a
               >
               <a
                 href="#charity"
