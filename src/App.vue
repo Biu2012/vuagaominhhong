@@ -142,7 +142,7 @@
               'text-gray-900 hover:bg-gray-50': currentPage !== 'rice-log',
             }"
             class="block px-3 py-2 text-base font-medium cursor-pointer"
-            >Nhật Ký Gạo</a
+            >Số Gạo</a
           >
           <a
             href="#charity"
