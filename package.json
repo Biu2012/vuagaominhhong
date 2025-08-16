@@ -1,28 +1,30 @@
 {
-  "name": "next-app",
-  "version": "0.1.0",
+  "name": "website-gao-minh-hong",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development next dev -H 0.0.0.0 -p 3000",
-    "build": "next build",
-    "lint": "next lint"
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@react-google-maps/api": "^2.19.3",
-    "next": "15.3.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "recharts": "^3.0.2"
+    "@fortawesome/fontawesome-svg-core": "^7.0.0",
+    "@fortawesome/free-solid-svg-icons": "^7.0.0",
+    "@fortawesome/vue-fontawesome": "^3.1.1",
+    "ant-design-vue": "4.x",
+    "font-awesome": "^4.7.0",
+    "swiper": "^11.2.10",
+    "vue": "^3.5.18"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.7.0",
     "autoprefixer": "^10.4.21",
-    "cross-env": "^7.0.3",
-    "postcss": "^8.5.5",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5"
+    "postcss": "^8.5.6",
+    "tailwindcss": "3",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2",
+    "vue-tsc": "^3.0.5"
   }
 }
