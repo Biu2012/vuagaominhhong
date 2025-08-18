@@ -294,37 +294,34 @@
               class="product-swiper"
             >
               <swiper-slide
+                class="bg-white rounded-lg shadow-md h-full"
                 v-for="product in featuredProducts"
                 :key="product.id"
+                :id="
+                  'product-' + product.name.toLowerCase().replace(/\s+/g, '-')
+                "
               >
-                <div
-                  :id="
-                    'product-' + product.name.toLowerCase().replace(/\s+/g, '-')
-                  "
-                  class="bg-white rounded-lg shadow-md overflow-hidden"
-                >
-                  <img
-                    :src="product.image"
-                    :alt="product.name"
-                    class="w-full h-48 object-cover object-top"
-                  />
-                  <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                      {{ product.name }}
-                    </h3>
-                    <p class="text-gray-500 mb-3">{{ product.description }}</p>
-                    <div class="flex items-center mb-4">
-                      <span class="text-2xl font-bold text-green-700">{{
-                        product.price
-                      }}</span>
-                    </div>
-                    <button
-                      @click="handleOrderClick(product)"
-                      class="!rounded-button whitespace-nowrap w-full bg-green-700 hover:bg-green-800 text-white px-6 py-2 font-semibold transition-colors cursor-pointer"
-                    >
-                      Đặt Hàng
-                    </button>
+                <img
+                  :src="product.image"
+                  :alt="product.name"
+                  class="w-full h-56 object-contain object-center"
+                />
+                <div class="p-6 min-h-72 flex flex-col justify-center">
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                    {{ product.name }}
+                  </h3>
+                  <p class="text-gray-500 mb-3">{{ product.description }}</p>
+                  <div class="flex items-center mb-4">
+                    <span class="text-2xl font-bold text-green-700">{{
+                      product.price
+                    }}</span>
                   </div>
+                  <button
+                    @click="handleOrderClick(product)"
+                    class="!rounded-button whitespace-nowrap w-full bg-green-700 hover:bg-green-800 text-white px-6 py-2 font-semibold transition-colors cursor-pointer"
+                  >
+                    Đặt Hàng
+                  </button>
                 </div>
               </swiper-slide>
             </swiper>
@@ -1381,9 +1378,9 @@
               </li>
               <li class="flex items-center space-x-2">
                 <i class="fas fa-envelope"></i>
-                 <a :href="`mailto:arantran201299@gmail.com`">
-                    <span>arantran201299@gmail.com</span>
-                  </a>
+                <a :href="`mailto:arantran201299@gmail.com`">
+                  <span>arantran201299@gmail.com</span>
+                </a>
               </li>
               <li class="flex items-center space-x-2">
                 <i class="fas fa-map-marker-alt"></i>
@@ -1803,24 +1800,21 @@ const featuredProducts = ref([
     name: "Gạo ST21",
     description: "Dẻo nhiều thơm",
     price: "28.000đ/kg",
-    image:
-      "https://readdy.ai/api/search-image?query=vietnamese%20ST21%20rice%20bag%20retail%20packaging%20with%20product%20label%20and%20branding%20on%20clean%20white%20background%20supermarket%20style%20package%20professional%20product%20photography&width=320&height=240&seq=product006&orientation=landscape",
+    image: "/public/st21.png",
   },
   {
     id: 3,
     name: "Gạo Thơm Lài",
     description: "Dẻo nhiều thơm",
     price: "20.000đ/kg",
-    image:
-      "https://readdy.ai/api/search-image?query=jasmine%20rice%20retail%20bag%20packaging%20with%20vietnamese%20text%20and%20branding%20on%20clean%20white%20background%20supermarket%20style%20package%20professional%20product%20photography&width=320&height=240&seq=product007&orientation=landscape",
+    image: "/public/thomlai.png",
   },
   {
     id: 4,
     name: "Gạo Jasmine",
     description: "Gạo dẻo vừa, thơm nhẹ",
     price: "18.000đ/kg",
-    image:
-      "https://readdy.ai/api/search-image?query=jasmine%20rice%20premium%20packaging%20with%20clear%20branding%20on%20clean%20white%20background%20retail%20package%20professional%20product%20photography&width=320&height=240&seq=product008&orientation=landscape",
+    image: "/public/thomlaimien.png",
   },
   {
     id: 5,
@@ -2159,9 +2153,7 @@ html {
 .\!rounded-button {
   border-radius: 8px !important;
 }
-.product-swiper {
-  padding: 20px 40px;
-}
+
 .product-swiper :deep(.swiper-button-next),
 .product-swiper :deep(.swiper-button-prev) {
   color: #15803d;
